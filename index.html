@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OB49 UPDATE PATCH NOTES</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Teko:wght@500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FF4655;
+            --primary-dark: #D93A48;
+            --dark: #0F1923;
+            --dark-light: #1A2A3A;
+            --dark-lighter: #263648;
+            --text: #FFFFFF;
+            --text-light: #E0E0E0;
+            --text-lighter: #8B98A8;
+            --instagram: #E1306C;
+            --telegram: #0088CC;
+            --youtube: #FF0000;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--dark);
+            color: var(--text);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+        
+        /* Disable text selection */
+        body {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        /* Main Title Styles - IMPROVED */
+        .main-title {
+            text-align: center;
+            margin: 30px 0;
+            padding: 30px 0;
+            border-bottom: 2px solid var(--primary);
+            border-top: 2px solid var(--primary);
+            background: linear-gradient(135deg, rgba(15,25,35,0.9), rgba(26,42,58,0.9));
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        
+        .main-title::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsNzAsODUsMC4xKSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3QgZmlsbD0idXJsKCNwYXR0ZXJuKSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIvPjwvc3ZnPg==');
+        }
+        
+        .main-title h1 {
+            font-size: 52px;
+            color: var(--primary);
+            font-weight: 700;
+            font-family: 'Teko', sans-serif;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            position: relative;
+            margin: 10px 0;
+            line-height: 1;
+        }
+        
+        .main-title p {
+            font-size: 20px;
+            color: var(--text-light);
+            font-weight: 500;
+            position: relative;
+            margin-top: 15px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        
+        /* Main Content Styles */
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto 50px;
+            padding: 0 30px;
+        }
+        
+        .news-banner {
+            background: linear-gradient(135deg, var(--primary), var(--dark-light));
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .news-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjA1KSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3QgZmlsbD0idXJsKCNwYXR0ZXJuKSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIvPjwvc3ZnPg==');
+        }
+        
+        .news-banner h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: white;
+            font-weight: 700;
+            position: relative;
+            font-family: 'Teko', sans-serif;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        
+        .news-banner p {
+            font-size: 18px;
+            color: var(--text-light);
+            font-weight: 500;
+            position: relative;
+        }
+        
+        /* Update Sections */
+        .update-section {
+            background-color: var(--dark-light);
+            border-radius: 8px;
+            padding: 35px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .update-section::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--primary);
+        }
+        
+        .update-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .update-header h2 {
+            font-size: 28px;
+            color: var(--primary);
+            margin-right: 15px;
+            font-weight: 700;
+            font-family: 'Teko', sans-serif;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        
+        .update-content {
+            line-height: 1.7;
+        }
+        
+        .update-content p {
+            margin-bottom: 18px;
+            color: var(--text-light);
+            font-weight: 400;
+        }
+        
+        .update-content h3 {
+            color: var(--primary);
+            margin: 25px 0 15px;
+            font-size: 24px;
+            font-weight: 600;
+            font-family: 'Teko', sans-serif;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        
+        .update-content h4 {
+            color: var(--text-light);
+            margin: 20px 0 10px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        .update-content ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .update-content li {
+            margin-bottom: 10px;
+            color: var(--text-light);
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .update-content li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-size: 16px;
+        }
+        
+        .image-container {
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .image-container img {
+            max-width: 100%;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .image-caption {
+            margin-top: 10px;
+            font-size: 14px;
+            color: var(--text-lighter);
+            font-style: italic;
+        }
+        
+        /* Tables - IMPROVED */
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 25px 0;
+        }
+        
+        .update-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0 auto;
+            background-color: var(--dark-lighter);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 14px;
+        }
+        
+        .update-table th, .update-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .update-table th {
+            background-color: rgba(255, 70, 85, 0.2);
+            color: var(--primary);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+            text-align: left;
+        }
+        
+        .update-table td {
+            text-align: center;
+            color: var(--text-light);
+        }
+        
+        .update-table tr:first-child th {
+            text-align: center;
+        }
+        
+        .update-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .update-table tr:hover {
+            background-color: rgba(255, 255, 255, 0.02);
+        }
+        
+        /* Highlight Box */
+        .highlight-box {
+            background-color: var(--dark-lighter);
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 5px 5px 0;
+            position: relative;
+        }
+        
+        .highlight-box::before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 60px;
+            color: var(--primary);
+            opacity: 0.2;
+            font-family: serif;
+            line-height: 1;
+        }
+        
+        .highlight-box p {
+            color: var(--text-light);
+            font-style: italic;
+            margin: 0;
+            padding-left: 30px;
+            position: relative;
+            z-index: 1;
+            font-weight: 500;
+        }
+        
+        /* Footer - IMPROVED */
+        footer {
+            background-color: var(--dark-light);
+            padding: 40px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
+            width: 100%;
+            max-width: 500px;
+        }
+        
+        .social-row {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            padding: 12px 20px;
+            background-color: var(--dark-lighter);
+            border-radius: 6px;
+            text-decoration: none;
+            color: var(--text-light);
+            transition: all 0.3s;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .social-link.instagram {
+            border-left-color: var(--instagram);
+        }
+        
+        .social-link.telegram {
+            border-left-color: var(--telegram);
+        }
+        
+        .social-link.youtube {
+            border-left-color: var(--youtube);
+        }
+        
+        .social-link:hover {
+            transform: translateX(5px);
+        }
+        
+        .social-link.instagram:hover {
+            background-color: rgba(225, 48, 108, 0.1);
+            color: var(--instagram);
+        }
+        
+        .social-link.telegram:hover {
+            background-color: rgba(0, 136, 204, 0.1);
+            color: var(--telegram);
+        }
+        
+        .social-link.youtube:hover {
+            background-color: rgba(255, 0, 0, 0.1);
+            color: var(--youtube);
+        }
+        
+        .social-link i {
+            margin-right: 15px;
+            font-size: 20px;
+            width: 24px;
+            text-align: center;
+        }
+        
+        .social-link.instagram i {
+            color: var(--instagram);
+        }
+        
+        .social-link.telegram i {
+            color: var(--telegram);
+        }
+        
+        .social-link.youtube i {
+            color: var(--youtube);
+        }
+        
+        .social-username {
+            text-align: center;
+            color: var(--text-light);
+            font-size: 18px;
+            font-weight: 500;
+            margin-top: 10px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 30px;
+            color: var(--text-lighter);
+            font-size: 14px;
+            width: 100%;
+        }
+        
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .update-section {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+        
+        /* Delay animations for each section */
+        .update-section:nth-child(1) { animation-delay: 0.1s; }
+        .update-section:nth-child(2) { animation-delay: 0.2s; }
+        .update-section:nth-child(3) { animation-delay: 0.3s; }
+        .update-section:nth-child(4) { animation-delay: 0.4s; }
+        .update-section:nth-child(5) { animation-delay: 0.5s; }
+        .update-section:nth-child(6) { animation-delay: 0.6s; }
+        .update-section:nth-child(7) { animation-delay: 0.7s; }
+        .update-section:nth-child(8) { animation-delay: 0.8s; }
+        .update-section:nth-child(9) { animation-delay: 0.9s; }
+        .update-section:nth-child(10) { animation-delay: 1.0s; }
+        
+        /* Font Loading Fix */
+        .wf-loading body {
+            visibility: hidden;
+        }
+        
+        .wf-active body, .wf-inactive body {
+            visibility: visible;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .main-container {
+                padding: 0 20px;
+            }
+            
+            .update-section {
+                padding: 25px;
+            }
+            
+            .update-table {
+                font-size: 13px;
+            }
+            
+            .update-table th, .update-table td {
+                padding: 8px 10px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .main-title h1 {
+                font-size: 42px;
+            }
+            
+            .main-title p {
+                font-size: 18px;
+            }
+            
+            .news-banner h2 {
+                font-size: 28px;
+            }
+            
+            .news-banner p {
+                font-size: 16px;
+            }
+            
+            .update-header h2 {
+                font-size: 24px;
+            }
+            
+            .update-content h3 {
+                font-size: 22px;
+            }
+            
+            .update-content h4 {
+                font-size: 18px;
+            }
+            
+            .social-row {
+                gap: 15px;
+            }
+            
+            .social-link {
+                padding: 10px 15px;
+                font-size: 14px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .main-title h1 {
+                font-size: 36px;
+            }
+            
+            .main-title p {
+                font-size: 16px;
+            }
+            
+            .update-section {
+                padding: 20px;
+            }
+            
+            .update-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            
+            .update-header h2 {
+                margin-right: 0;
+            }
+            
+            .social-row {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .social-link {
+                justify-content: center;
+            }
+            
+            .social-username {
+                font-size: 16px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+        WebFont.load({
+            google: {
+                families: ['Montserrat:400,500,600,700', 'Teko:500,600']
+            },
+            active: function() {
+                sessionStorage.fonts = true;
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="main-title">
+            <h1>OB49 UPDATE PATCH NOTES</h1>
+            <p>GAME UPDATE: MAY 21, 2025</p>
+        </div>
+        
+        <div class="news-banner">
+            <h2>EXPLORE THE NEW FEATURES</h2>
+            <p>Discover all the improvements in the latest update</p>
+        </div>
+        
+        <div class="update-section" id="map">
+            <div class="update-header">
+                <h2>MAP</h2>
+            </div>
+            <div class="update-content">
+                <h3>NEW MAP - SOLARA</h3>
+                
+                <div class="image-container">
+                    <img src="https://dl.gmc.freefiremobile.com/common/Local/IND/config/SolarisNewMapPreheat-1400x700_en.jpg" alt="Solara New Map">
+                    <p class="image-caption">Solara - The new tropical paradise map</p>
+                </div>
+                
+                <p>Begin a new adventure in this vibrant city!</p>
+                
+                <div class="highlight-box">
+                    <p>Welcome to Solara, a lively summer port city with beautiful Jacaranda trees and charming tropical scenery. This map features stunning dual peak points and an exciting slide rail system, offering diverse combat strategies and exploration opportunities. Whether you're navigating through flower-filled streets or enjoying romantic moments under the Ferris wheel, Solara offers endless possibilities!</p>
+                </div>
+                
+                <p>The Solara map combines realistic and subtly sci-fi art styles with a color palette of blues, whites, and bright yellows, inspired by seaside port cities. It features distinctive landscapes like valleys, waterfalls, and Jacaranda trees, along with several unique locations that each offer unique experiences:</p>
+                
+                <ul>
+                    <li><strong>Studio:</strong> A film set simulation area with distinctive backlot buildings. Two steam trains run toward each other in the center, creating special strategic opportunities for combat in this zone.</li>
+                    <li><strong>Cascadale:</strong> A perfectly symmetrical research center with reflective slides as key structural features. Use the slides to quickly position yourself for combat advantage.</li>
+                    <li><strong>Bloomtown:</strong> The heart of the city features winding flower streets filled with blossoms. Originally a steep and dangerous straight road, it has been redesigned into S-shaped curves decorated with beautiful Jacaranda trees.</li>
+                    <li><strong>Sewage Works:</strong> A sewage treatment plant with yellow pipes running through it. These pipes contain secret paths for exploration, but beware of enemies hiding inside.</li>
+                </ul>
+                
+                <p>The entire Solara map is filled with slide rails and stations, allowing players to move quickly across the terrain. While using slide rails, players can deploy special ice walls for protection. If enemies are nearby, the slide will flash red as a warning.</p>
+                
+                <p>The new map will launch alongside Ranked and 4v4 Ranked modes. During the first week, players won't lose ranking points after their first daily loss in Ranked mode, and won't lose stars after their first daily loss in 4v4 Ranked mode.</p>
+                
+                <p>During the event, 4v4 matches on Solara will have two consecutive rounds in the same map area after the first round, with teams swapping spawn points between rounds.</p>
+            </div>
+        </div>
+        
+        <div class="update-section" id="general-mode">
+            <div class="update-header">
+                <h2>GENERAL MODE</h2>
+            </div>
+            <div class="update-content">
+                <h3>SUPPLY ADJUSTMENTS</h3>
+                <p>Explore new supply strategies</p>
+                
+                <div class="highlight-box">
+                    <p>In General Mode, your supply choices will determine your battlefield strategy. This patch adjusts several supplies to allow players to explore and master new General Mode strategies.</p>
+                </div>
+                
+                <ul>
+                    <li><strong>Bounty Marks:</strong> Added Ignis' skill card</li>
+                    <li><strong>Backpack:</strong> Capacity increased: 300 → 240</li>
+                    <li><strong>Supply Box:</strong> Weapons received when revived: Bizon → P90</li>
+                    <li><strong>Portable Shop:</strong>
+                        <ul>
+                            <li>Removed revival cards and armor equipment</li>
+                            <li>Added: Inhaler, Level 3 Helmet, Level 3 Armor, Dimitri skill card, Oscar skill card</li>
+                            <li>Price adjustments: Scout: 600 → 800 FF coins, Super Med: 100 → 200 FF coins, 4x Scope: 200 → 100 FF coins</li>
+                            <li>Removed ammo purchase limit</li>
+                        </ul>
+                    </li>
+                    <li><strong>Supply Map:</strong> All items removed and replaced with 600 to 2000 FF coins. After that, you have a chance to get the next supply map location or a small chance to get Level 3 Helmet and Level 4 Armor instead.</li>
+                    <li><strong>Airdrop Call:</strong> Improved weapon arsenal: AWM, SVD, M249, GROZA</li>
+                </ul>
+                
+                <h3>SAFE ZONE ADJUSTMENTS</h3>
+                <p>Slowing down early game actions</p>
+                
+                <div class="highlight-box">
+                    <p>Beyond the usual skill and weapon adjustments, each patch introduces new activities for players to explore. Recently, the current zone shrinking speed combined with new gameplay features has made matches feel rushed. This patch will slow down the early game, giving players more time to enjoy and explore deeper content.</p>
+                </div>
+                
+                <h4>NeXTerra - Solo:</h4>
+                <div class="table-container">
+                    <table class="update-table">
+                        <thead>
+                            <tr>
+                                <th>SEQUENCE</th>
+                                <th>OUTSIDE AREA START TIME</th>
+                                <th>COUNTDOWN FOR THE SQUEEZE</th>
+                                <th>SAFE AREA SIZE</th>
+                                <th>SQUEEZE DISTANCE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>150 sec → 70 sec</td>
+                                <td>95 sec → 140 sec</td>
+                                <td>400 m → 450 m</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>-</td>
+                                <td>70 sec → 40 sec</td>
+                                <td>200 m → 225 m</td>
+                                <td>85 sec → 115 sec</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>-</td>
+                                <td>80 sec → 140 sec</td>
+                                <td>100 m → 115 m</td>
+                                <td>80 sec → 110 sec</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <h4>NeXTerra - Team:</h4>
+                <div class="table-container">
+                    <table class="update-table">
+                        <thead>
+                            <tr>
+                                <th>SEQUENCE</th>
+                                <th>OUTSIDE AREA START TIME</th>
+                                <th>COUNTDOWN FOR THE SQUEEZE</th>
+                                <th>SAFE AREA SIZE</th>
+                                <th>SQUEEZE DISTANCE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>150 sec → 70 sec</td>
+                                <td>120 sec → 140 sec</td>
+                                <td>400 m → 450 m</td>
+                                <td>210 sec → 200 sec</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>-</td>
+                                <td>60 sec → 40 sec</td>
+                                <td>200 m → 225 m</td>
+                                <td>85 sec → 115 sec</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>-</td>
+                                <td>50 sec → 140 sec</td>
+                                <td>100 m → 115 m</td>
+                                <td>80 sec → 110 sec</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <h4>Solara, Kalahari, Purgatory<br>Desolate Settlement - Solo:</h4>
+                <div class="table-container">
+                    <table class="update-table">
+                        <thead>
+                            <tr>
+                                <th>SEQUENCE</th>
+                                <th>COUNTDOWN FOR THE SQUEEZE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>180 sec → 140 sec</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>75 sec → 55 sec</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>60 sec → 40 sec</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>50 sec → 40 sec</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <h4>Solara, Kalahari, Purgatory<br>Desolate Settlement - Team:</h4>
+                <div class="table-container">
+                    <table class="update-table">
+                        <thead>
+                            <tr>
+                                <th>SEQUENCE</th>
+                                <th>COUNTDOWN FOR THE SQUEEZE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>120 sec → 140 sec</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>40 sec → 30 sec</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>40 sec → 30 sec</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <h3>OTHER IMPROVEMENTS</h3>
+                <ul>
+                    <li>Adjusted the number and positions of coin dispensers in some areas</li>
+                    <li>Increased the spawn chance of high-level reward zones, increasing chances near map edges and improving rewards within</li>
+                    <li>Slightly reduced the total number of gifts</li>
+                    <li>Removed revival weapons from airdrops in General Mode Solo</li>
+                    <li>Increased the maximum advanced revival purchase limit to 15 times</li>
+                    <li>Allowed revived players to keep 40% of their FF coins (max 400)</li>
+                    <li>Increased M249 ammo in airdrops from 60 to 120</li>
+                    <li>Vending Machine Adjustments:
+                        <ul>
+                            <li>Available weapons adjusted to Trogon, VSS, and M60-III</li>
+                            <li>Increased Armory Key price from 800 FF coins to 1000 FF coins</li>
+                            <li>Improved existing skill cards to match Kenta's and Skyler's skills</li>
+                            <li>Removed purchase limit for grappling guns (Kalahari only)</li>
+                        </ul>
+                    </li>
+                    <li>Equipment Cooldown Adjustments:
+                        <ul>
+                            <li>A124/Clu: -20%</li>
+                            <li>Alok/Steffie/Skyler/Iris/Tatsuya/UAV-Lite/Heal UAV-Lite: -30%</li>
+                            <li>Dimitri/Kenta/Small Turret: -40%</li>
+                            <li>Ignis: +30%</li>
+                        </ul>
+                    </li>
+                    <li>Out-of-zone healing reduction adjustments:
+                        <ul>
+                            <li>Cumulative healing reduction (every 12 seconds): 5% → 6%</li>
+                            <li>Maximum stacks: 8 → 10</li>
+                        </ul>
+                    </li>
+                    <li>Improved jump signal accuracy during parachuting</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="update-section" id="4v4-mode">
+            <div class="update-header">
+                <h2>4V4 MODE</h2>
+            </div>
+            <div class="update-content">
+                <h3>OTHER ADJUSTMENTS</h3>
+                <ul>
+                    <li>Improved weapon descriptions in the 4v4 shop</li>
+                    <li>Improved display of CS money earned per round</li>
+                    <li>Shop Changes:
+                        <ul>
+                            <li>Reduced Trogon price from 1900 to 1700 4v4 money</li>
+                            <li>Added VSS to Cyber Items category, priced at 1400 4v4 money</li>
+                            <li>Added Kord to Cyber Items category, priced at 1400 4v4 money</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="update-section" id="characters">
+            <div class="update-header">
+                <h2>CHARACTERS</h2>
+            </div>
+            <div class="update-content">
+                <div class="image-container">
+                    <img src="https://dl.gmc.freefiremobile.com/common/Local/IND/config/OB49CharacterUpdatesPreheat-1400x700_en.jpg" alt="Character Updates">
+                    <p class="image-caption">Character balance changes in OB49 update</p>
+                </div>
+                
+                <h3>CHARACTER IMPROVEMENTS</h3>
+                <h4>Paloma</h4>
+                <p>New scope for the master of firepower</p>
+                
+                <div class="highlight-box">
+                    <p>With recent changes increasing backpack capacity allowing players to carry more ammo, Paloma's skill of extra ammo storage has become less significant. The new Paloma enhances weapon accuracy while pressuring enemies and penetrating ice walls, allowing quick elimination of enemies hiding behind ice walls.</p>
+                </div>
+                
+                <p><strong>Scatter:</strong> Weapon accuracy increases for 10 seconds after destroying an ice wall</p>
+                
+                <h3>CHARACTER BALANCE</h3>
+                <h4>Ignis</h4>
+                <p>Double the firepower!</p>
+                
+                <div class="highlight-box">
+                    <p>With Ignis' adjustments now live, his new flaming scene has caused a stir in Bermuda. However, its effect from a single use still doesn't compare to other skills. This time we've doubled the power to enhance performance. Hopefully, Ignis will truly shine on the battlefield.</p>
+                </div>
+                
+                <p><strong>Maya Flame:</strong> Creates a wide 10m fire wall lasting 10 seconds and moving forward at 6m/s for up to 5s → 8s. While active, use skill again to stop the wall. Enemies (or ice walls) touching it take immediate damage of 25 (or 400) and will take 5 (or 100 → 150) damage per second for 2s. Cooldown: 60s. Can store up to 2 skill uses with 0.5s cooldown between uses.</p>
+                
+                <h4>Layla</h4>
+                <p>One more ice wall!</p>
+                
+                <div class="highlight-box">
+                    <p>In Bermuda, ice walls are essential for survival, especially in long-range combat where obtaining ice walls often depends on luck. With the new patch, Layla changes the game by doubling ice wall rewards from her skill, ensuring long-range fighters always have enough. Thanks to Layla, ice walls are no longer a special luxury item. Players can use ice walls freely and strategically anytime, anywhere.</p>
+                </div>
+                
+                <p><strong>Deadly Ice:</strong> When attacking enemies or vehicles with rifles and sniper rifles, reduces enemy movement speed by 10% or vehicle acceleration by 80% for 3s. If enemies are downed while slowed, they can be frozen for up to 3s. Receive additional ice walls: 1 → 2.</p>
+                
+                <h4>Luqueta</h4>
+                <p>Adjusted power curve with early and late game strength</p>
+                
+                <div class="highlight-box">
+                    <p>Luqueta's abilities often encourage players to engage in combat for more advantages. While the maximum stack limit for his skill effects has increased to 3, the shield values from the first two stacks have been slightly reduced to balance this change.</p>
+                </div>
+                
+                <p><strong>Hat-trick:</strong> Each elimination permanently increases max shield by 20 → 15. Maximum increase: 40 → 45. Effects clear when player is eliminated or new round begins.</p>
+                
+                <h4>Moco</h4>
+                <p>The all-seeing eye of the mighty Enigma</p>
+                
+                <div class="highlight-box">
+                    <p>Moco's ability to mark enemy positions makes her both an excellent scout and strong teammate, synergizing well with characters like Mako for heavy damage and Hayato for extra coins. These powerful combos and superior intel-gathering abilities make her a standout force. For balance, we've slightly reduced Moco's enemy marking duration. After all, no one stays on top forever.</p>
+                </div>
+                
+                <p><strong>Enigma's Eye:</strong> Marks attacked enemies, revealing their position on battlefield view, minimap, and sharing with teammates for 5s → 4s. Enemies moving while marked have their position revealed longer, up to 6.5s → 5.5s.</p>
+                
+                <h4>Luna</h4>
+                <p>Powerful movement capabilities</p>
+                
+                <div class="highlight-box">
+                    <p>With her unique combination of increased fire rate and special movement speed, Luna has become a force in close combat, controlling the flow of battle. In the next update, we'll adjust her mobility while maintaining her signature rapid-fire style. Luna players will need to be more careful with positioning to maximize effectiveness on the battlefield.</p>
+                </div>
+                
+                <p><strong>Custom Bullets:</strong> Increases fire rate by 8% when user attacks enemies. Maximum fire rate of 15% → 10% is converted to movement speed, and changes reset when user survives combat.</p>
+                
+                <h3>OTHER SKILL IMPROVEMENTS</h3>
+                <ul>
+                    <li><strong>Skyler:</strong> Added obstacle indicators in crosshairs for more precise aiming</li>
+                    <li><strong>Homer and Clu:</strong> Added sound alerts when no enemies are found</li>
+                    <li><strong>Cassie (Usage Improvement):</strong>
+                        <ul>
+                            <li>Added special buffer area at maximum link range (Healing Bond). If players accidentally step out of range, they can quickly move back to reactivate the link.</li>
+                            <li>Second healing step (Focused Therapy) cannot be performed when target has full HP.</li>
+                        </ul>
+                    </li>
+                    <li>Blue's skill can be used while parachuting</li>
+                    <li>Added skill cards for Koda, Cassie, and Oscar</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="update-section" id="weapons">
+            <div class="update-header">
+                <h2>WEAPONS & BALANCE</h2>
+            </div>
+            <div class="update-content">
+                <div class="image-container">
+                    <img src="https://dl.gmc.freefiremobile.com/common/Local/IND/config/OB49WeaponUpdatesPreheat-1400x700_en.jpg" alt="Weapon Updates">
+                    <p class="image-caption">Weapon balance changes in OB49 update</p>
+                </div>
+                
+                <h3>WEAPON BALANCE</h3>
+                <h4>Assault Rifles: SCAR, M4A1, M14, FAMAS, AUG, GROZA, PLASMA</h4>
+                
+                <div class="highlight-box">
+                    <p>In recent patches, the overall strength of non-upgradable rifles has increased, making early-game combat smoother but narrowing the gap between high-level and non-upgradable rifles. To enhance mid-to-late game weapon experience, the new patch will increase the power and ice wall penetration of high-level and upgradable rifles. Additionally, PLASMA's ice wall penetration will receive a slight buff. Furthermore, the M14 will be reclassified from rifle to sniper rifle with increased long-range power.</p>
+                </div>
+                
+                <ul>
+                    <li><strong>M14/M14-I/M14-II/M14-III:</strong> Reclassified as sniper rifle. Armor penetration +10%, damage to ice walls +30%</li>
+                    <li><strong>SCAR/SCAR-I/SCAR-II/SCAR-III:</strong> Damage +3%, damage to ice walls +30%</li>
+                    <li><strong>M4A1/M4A1-I/M4A1-II/M4A1-III:</strong> Damage +5%, damage to ice walls +30%</li>
+                    <li><strong>GROZA/GROZA-X:</strong> Damage to ice walls +30%</li>
+                    <li><strong>FAMAS/FAMAS-I/FAMAS-II/FAMAS-III:</strong> Damage to ice walls +20%</li>
+                    <li><strong>AUG/AUG-I/AUG-II/AUG-III:</strong> Damage to ice walls +20%</li>
+                    <li><strong>PLASMA (Buff):</strong> Damage to ice walls +50%</li>
+                </ul>
+                
+                <h4>Machine Guns: M60 and M249</h4>
+                
+                <div class="highlight-box">
+                    <p>Machine guns have been forgotten for too long, but now M60 and M249 are getting enhanced in both damage and mobility.</p>
+                </div>
+                
+                <ul>
+                    <li><strong>M60/M60-I/M60-II/M60-III:</strong> Ammo capacity 60 → 70, armor penetration +8%, movement speed while firing +20%</li>
+                    <li><strong>M249/M249-X:</strong> Armor penetration +8%, movement speed while firing +10%</li>
+                </ul>
+                
+                <h4>Healing Gun</h4>
+                
+                <div class="highlight-box">
+                    <p>The healing gun is one of the few tools for restoring HP that can be used, but its effectiveness is often limited by the challenge of healing teammates while moving. In this update, we've improved its accuracy, making it easier for players to support their team in the heat of battle.</p>
+                </div>
+                
+                <p><strong>Healing Gun:</strong> Accuracy +20%</p>
+                
+                <h4>Trogon (Grenade Launcher Mode)</h4>
+                
+                <div class="highlight-box">
+                    <p>After adjustments regarding explosions in previous patches, Trogon's grenade launcher mode has fallen out of favor with players. To address this, we're slightly increasing the power and range of this mode.</p>
+                </div>
+                
+                <p><strong>Trogon (Grenade Launcher Mode):</strong> Damage +15%, range +10%</p>
+                
+                <h3>ARMOR ATTACHMENT IMPROVEMENTS</h3>
+                
+                <div class="highlight-box">
+                    <p>Some armor attachments have seen relatively low usage in matches despite playing important roles in combat. This makes it difficult for players to estimate enemy HP and damage during fights. In the new update, all armor attachments will be adjusted to have clearer roles in combat.</p>
+                </div>
+                
+                <ul>
+                    <li><strong>Steel Helmet Plate:</strong> Headshot damage -35% → -10%, helmet durability +10%</li>
+                    <li><strong>HP Armor:</strong> Shield and max shield +30 → +20</li>
+                    <li><strong>Armor Extender:</strong> Limb damage reduction: 25%, shield and max shield +30 → Limb damage reduction: 10%, shield and max shield +20</li>
+                </ul>
+                
+                <h3>NEW WEAPON IMPROVEMENTS</h3>
+                <h4>Kord</h4>
+                
+                <div class="highlight-box">
+                    <p>Kord has been unpopular for a long time and was once known for its ice wall penetration but lacked standout combat power. After the remake, it combines strong combat capabilities with effective ice wall penetration, performing well both when firing standing or crouching.</p>
+                </div>
+                
+                <ul>
+                    <li><strong>Standing:</strong> Fires three low-power rounds at a rapid rate</li>
+                    <li><strong>Crouching:</strong> Fires one high-power round at a moderate rate</li>
+                </ul>
+                
+                <h4>VSS</h4>
+                
+                <div class="highlight-box">
+                    <p>As one of the most unique weapons in the game, VSS has several special effects that have caused both favor and frustration among players. However, its presence in matches has declined recently, so we're improving VSS to make it a powerful weapon once again!</p>
+                </div>
+                
+                <ul>
+                    <li>Removed bleeding effect and upgrade mechanism</li>
+                    <li>Added 3-round burst auto-fire mode, significantly increasing fire rate, accuracy, and magazine capacity</li>
+                </ul>
+                
+                <h4>Healing Gun-Y</h4>
+                
+                <div class="highlight-box">
+                    <p>The Healing Gun-Y is a high-power weapon for assisting teammates, but its complex mechanism has made many unable to fully utilize its rescue function. In the new patch, this special mechanism has been simplified. Players can rescue downed teammates simply by shooting them with the Healing Gun-Y!</p>
+                </div>
+                
+                <ul>
+                    <li>Heals living teammates for 25 HP by shooting; revives downed teammates by shooting (no effect on Tiva)</li>
+                    <li>No limit on rescues</li>
+                </ul>
+                
+                <h3>OTHER IMPROVEMENTS</h3>
+                <ul>
+                    <li>Bullet traces from off-screen enemies are more visible, making it easier to identify shots from high or hard-to-cover positions</li>
+                    <li>Attacks that penetrate ice walls (e.g., M82B, Iris' skill) will have clearer visual effects when attacking ice walls</li>
+                </ul>
+                
+                <h3>WEAPON SOUND IMPROVEMENTS</h3>
+                <p>Clearer combat feedback sounds</p>
+                
+                <div class="highlight-box">
+                    <p>In the past, the lack of clear sound feedback when attacking different types of objects created unnecessary complexity in intense combat situations. To address this, we've added new combat sound effects in the latest patch. These changes not only make feedback clearer but also enhance your situational awareness in combat.</p>
+                </div>
+                
+                <ul>
+                    <li>New sound effects when attacking:
+                        <ul>
+                            <li>Ice walls</li>
+                            <li>Armor</li>
+                            <li>Bodies</li>
+                            <li>Destructible crates</li>
+                        </ul>
+                    </li>
+                    <li>Improved sound effects when attacking vehicles</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="update-section" id="systems">
+            <div class="update-header">
+                <h2>VARIOUS SYSTEMS</h2>
+            </div>
+            <div class="update-content">
+                <h3>NEW PHOTO SYSTEM</h3>
+                <p>Record your special memories now!</p>
+                
+                <div class="highlight-box">
+                    <p>We're excited to introduce our latest photo system, designed to help you capture beautiful in-game moments and create unique memories with your friends.</p>
+                </div>
+                
+                <ul>
+                    <li>The photo system is accessible while playing, featuring hidden HUD, adjustable focus, photo/video templates, poses, and more! Enemy info is hidden when in photo mode</li>
+                    <li>Players can now take photos or record videos in the lobby. Select group templates and invite your friends to take photos in the photo system!</li>
+                    <li>Various frames and stickers are available when sharing photos!</li>
+                </ul>
+                
+                <h3>NEW PRIME SYSTEM</h3>
+                <p>Go to the Prime system and unlock special rewards!</p>
+                
+                <div class="highlight-box">
+                    <p>This journey has been full of excitement, and we wouldn't have come this far without your inspiration and support! We're thrilled to announce the new Prime system designed to offer unique privileges to each player based on their top-up history.</p>
+                </div>
+                
+                <ul>
+                    <li>About Prime: The Prime system will launch on June 1. Players simply need to claim 100 diamonds to join. Prime has 8 levels, each with exclusive privileges, with higher levels including privileges from lower levels. Prime privileges include special status displays like Prime badges, Prime profile frames, colored nicknames, plus special rewards like birthday gifts, poses, and more! Additionally, Prime players get early access to Lucky Royal events and special opportunities to purchase returning items.</li>
+                    <li>How to increase your Prime level: Players increase their level by earning Prime points (1 diamond = 1 Prime point). All diamonds ever received will be converted to Prime points and counted toward your Prime level progress.</li>
+                    <li>How to maintain your Prime level: Once you become a Prime player, you need to earn any Prime points each month to maintain your current level. Otherwise, on the first day of the next month, your Prime level will decrease by 1 and continue decreasing by 1 each month until reaching level 1. Earning any points will restore your highest-ever Prime level.</li>
+                </ul>
+                
+                <h3>FREE CUSTOM ROOM MODE</h3>
+                <p>Goodbye, room cards!</p>
+                
+                <div class="highlight-box">
+                    <p>All settings can be tried and enjoyed for free in custom room mode. Additionally, we've introduced advanced room cards, where advanced rooms appear at the top of the room list, and you can chat with other players during matches!</p>
+                </div>
+                
+                <ul>
+                    <li>Due to major improvements to the custom room system, all room cards have been removed. Players can create custom rooms for free!</li>
+                    <li>Pet Mania and Disturbing Duo modes have been removed, with custom setting sets for different gameplay</li>
+                    <li>For server stability, players cannot create new rooms within 3 minutes after creating a room. If total rooms reach server capacity, new room creation will be temporarily disabled</li>
+                    <li>Players can now invite friends to join rooms via link or QR code</li>
+                    <li>Added new advanced room cards costing 100 diamonds with the following privileges:
+                        <ul>
+                            <li>Advanced rooms appear at the top of the room list</li>
+                            <li>Special privileges displayed in the room, with unique effects for map creators</li>
+                            <li>Scoreboard automatically recording previous match results</li>
+                            <li>Match chat where players can communicate with opposing teams</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <h3>LOADOUT SYSTEM IMPROVEMENTS</h3>
+                <p>Character appearances and skills can be set separately!</p>
+                
+                <div class="highlight-box">
+                    <p>We've heard feedback from many players wanting more freedom in customizing characters. That's why we're excited to launch new features in the loadout system! Players can freely equip character appearances independently from associated skills, enabling creative new combinations. We've also made several improvements to enhance the loadout system experience.</p>
+                </div>
+                
+                <ul>
+                    <li><strong>Independent Character Appearance:</strong> On the character page, the Equip button will only apply the selected character's appearance without changing equipped skills</li>
+                    <li>Slightly improved loadout page interactions</li>
+                    <li>Automatic loadout switching for Normal Mode: When selecting Normal Mode, the system will automatically switch to the most compatible loadout based on similarity to General, 4v4, or Lone Wolf gameplay</li>
+                </ul>
+                
+                <h3>HUD SYSTEM IMPROVEMENTS</h3>
+                <p>Share your HUD settings using generated share codes, with more customization options!</p>
+                
+                <div class="highlight-box">
+                    <p>HUD settings can now be shared via code! We've also expanded customization scope for some HUD elements.</p>
+                </div>
+                
+                <ul>
+                    <li><strong>HUD Share Code:</strong> Players can create HUD share codes and use them to directly apply other players' HUD settings</li>
+                    <li><strong>HUD Button Customization:</strong> Expanded HUD button size customization range (1% to 200%) and transparency (minimum 1%)</li>
+                    <li>Added more customizable HUD settings including: Enter Vehicle button, coin count, elimination count in top right, spectator icon, and timed auto-revive</li>
+                </ul>
+                
+                <h3>CRAFTLAND MODE SELECTION PAGE UPDATE</h3>
+                <p>A mode selection page just for Craftland where you can find fun maps!</p>
+                
+                <div class="highlight-box">
+                    <p>A new tab has been added to the mode selection page to introduce the best Craftland maps for you to explore and enjoy!</p>
+                </div>
+                
+                <ul>
+                    <li>Added Craftland tab to mode selection page. The mode selection page now has two tabs: Official General Modes and Craftland. You can swipe to switch between the two tabs</li>
+                    <li>Players can directly select map modes from the Craftland tab and form teams to start matches from the lobby</li>
+                </ul>
+                
+                <h3>HYPERBOOK SYSTEM IMPROVEMENTS</h3>
+                <p>Major changes to Hyperbook reward unlocking</p>
+                
+                <div class="highlight-box">
+                    <p>A simpler and smoother Hyperbook usage experience.</p>
+                </div>
+                
+                <p>Starting from the Midnight Guardian Hyperbook, all Hyperbook rewards will be obtained from Royal events. This change won't affect existing Hyperbooks.</p>
+                
+                <h3>OTHER ADJUSTMENTS</h3>
+                <ul>
+                    <li>Added group photo feature to season summary</li>
+                    <li>Rank protection cards are limited to the current season only. Unused cards will expire and cannot be used next season</li>
+                    <li>Added new stats to match results page: Actual damage, headshots</li>
+                    <li>Players repeatedly detected with unfriendly behavior over time will be temporarily banned from General and 4v4 modes</li>
+                    <li>In training ground, weapons, items, and attachments are consolidated into one box for purchase</li>
+                    <li>In training ground, players receive ice walls every 3 eliminations (resets when eliminated)</li>
+                    <li>Players can now mark positions while driving vehicles</li>
+                    <li>Added interactive FFWS 2024 stickers to maps</li>
+                    <li>Added QR codes to profile page, custom rooms, team up page, and clan share page. Players can scan to quickly join friends</li>
+                    <li>Added option in settings to automatically switch weapons after using ice wall assist system</li>
+                    <li>Added new display items for custom profile page: Pet, Battle Card, Event Achievements, Achievement Points, Special Poses, and Outfit Sets</li>
+                    <li>Improved fonts and pop-up windows for in-match tips</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="update-section" id="craftland">
+            <div class="update-header">
+                <h2>CRAFTLAND</h2>
+            </div>
+            <div class="update-content">
+                <div class="image-container">
+                    <img src="https://dl.gmc.freefiremobile.com/common/Local/IND/config/OB49CustomRoomOptimizationPreheat-1400x700_en.jpg" alt="Craftland Updates">
+                    <p class="image-caption">Craftland improvements in OB49 update</p>
+                </div>
+                
+                <h3>BIG NEWS:</h3>
+                <ul>
+                    <li>Added Solara to selectable maps!</li>
+                </ul>
+                
+                <h3>RESOURCE SHOP:</h3>
+                <ul>
+                    <li>Added large collection of resources to the shop</li>
+                </ul>
+                
+                <h3>USERS CAN NOW SAVE SCENE OBJECTS AS TEMPLATES</h3>
+                <ul>
+                    <li>Users can publish templates to the shop or share with others via generated share links</li>
+                </ul>
+                
+                <h3>SCENE EDITING:</h3>
+                <ul>
+                    <li>Added new camera objects and related settings</li>
+                    <li>Added undo button in scenes</li>
+                    <li>Fixed camera height slider being hard to drag when at top position or when wearing skirts/pants</li>
+                    <li>Improved status when selecting NPCs</li>
+                </ul>
+                
+                <h3>AI CREATION:</h3>
+                <ul>
+                    <li>New themes added: Outdoor Cinema, Tactical Arena</li>
+                    <li>Adjusted boundaries for scenes using special shapes and freehand drawing</li>
+                </ul>
+                
+                <h3>BLOCK EDITING:</h3>
+                <ul>
+                    <li>Added switch bar for users to toggle between block scripts in editing page</li>
+                    <li>Users can create client-side block scripts suitable for local effects (e.g., special effects, interactions) and other features</li>
+                    <li>Added search feature in dropdown menus for blocks</li>
+                    <li>Added new list creation blocks and additional variable types</li>
+                </ul>
+                
+                <h3>UI EDITING:</h3>
+                <ul>
+                    <li>UI widgets can now be copied</li>
+                </ul>
+                
+                <p>More updates await your discovery!</p>
+                <p>Look forward to even more powerful features in the future!</p>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="social-links">
+                <div class="social-row">
+                    <a href="https://www.instagram.com/macbruh_ff" class="social-link instagram" target="_blank">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                    <a href="https://t.me/macbruh_ff" class="social-link telegram" target="_blank">
+                        <i class="fab fa-telegram"></i> Telegram
+                    </a>
+                    <a href="https://youtube.com/@macbruh_ff" class="social-link youtube" target="_blank">
+                        <i class="fab fa-youtube"></i> YouTube
+                    </a>
+                </div>
+                <div class="social-username">@MACBRUH_FF</div>
+            </div>
+            <div class="copyright">
+                <p> 🚀 ＰＯＷＥＲＥＤ ＢＹ ＭＡＣＢＲＵＨ ＦＦ ⚡
+</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Prevent right-click context menu
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        // Prevent text selection
+        document.addEventListener('selectstart', function(e) {
+            e.preventDefault();
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Animation on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.update-section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
